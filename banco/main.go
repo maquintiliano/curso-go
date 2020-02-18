@@ -1,8 +1,8 @@
 package main
 
 import (
-	"banco/clientes"
-	"banco/contas"
+	"curso-go/banco/clientes"
+	"curso-go/banco/contas"
 	"fmt"
 )
 
