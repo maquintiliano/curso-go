@@ -1,0 +1,34 @@
+package main
+
+import (
+	"fmt"
+)
+
+type ContaCorrente struct {
+	titular       string
+	numeroAgencia int
+	numeroConta   int
+	saldo         float64
+}
+
+func main() {
+	//referencia-se dessa forma quando todos os campos precisam ser preenchidos
+	contaDaMaria := ContaCorrente{"Maria", 589, 123456, 125.5}
+	fmt.Println(contaDaMaria)
+
+	//referencia-se dessa forma quando nem todos os campos precisam ser preenchidos
+	contaDaJulia := ContaCorrente{titular: "Julia", saldo: 200}
+	fmt.Println(contaDaJulia)
+
+	//é colocado * antes do ContaCorrente como um ponteiro
+	var contaDaCris *ContaCorrente
+	contaDaCris = new(ContaCorrente)
+	contaDaCris.titular = "Cris"
+	contaDaCris.saldo = 500
+
+	//colocar o ponteiro para mostrar o conteudo da conta
+	fmt.Println(*contaDaCris)
+
+	
+
+}
